@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/contact2">
+
+    <fragment
+        android:id="@+id/addContact"
+        android:name="com.uni.lab9_10.ui.AddContact"
+        android:label="fragment_add_contact"
+        tools:layout="@layout/fragment_add_contact" >
+        <action
+            android:id="@+id/action_addContact_to_contact2"
+            app:destination="@id/contact2" />
+    </fragment>
+    <fragment
+        android:id="@+id/contact2"
+        android:name="com.uni.lab9_10.ui.Contact"
+        android:label="Contact" >
+        <action
+            android:id="@+id/action_contact2_to_addContact"
+            app:destination="@id/addContact" />
+    </fragment>
+</navigation>
